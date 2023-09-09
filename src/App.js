@@ -13,19 +13,39 @@ function App() {
     city: "",
   })
 
+  const[educationInfo, setEducationInfo] = useState({
+    degree: "",
+    school: "",
+    city: "",
+    country: "",
+  })
+
+  const[professionalInfo, setProfessionalInfo] = useState({
+    jobTitle: "",
+    company: "",
+  })
+
   function updateGeneralInfo(newData) {
     setGeneralInfo(newData)
+  }
+
+  function updateEducationInfo(newData) {
+    setEducationInfo(newData)
+  }
+
+  function updateProfessionalInfo(newData) {
+    setProfessionalInfo(newData)
   }
 
   return (
     <div id='app'>
       <section id="input-section">
         <GeneralInfo setGeneralInfo={updateGeneralInfo} />
-        <EducationInfo />
-        <ProfessionalInfo />
+        <EducationInfo setEducationInfo={updateEducationInfo}/>
+        <ProfessionalInfo setProfessionalInfo={updateProfessionalInfo}/>
       </section>
       <section id="cv-section">
-        <CvDoc generalInfo={generalInfo} />
+        <CvDoc generalInfo={generalInfo} educationInfo={educationInfo} professionalInfo={professionalInfo} />
       </section>
     </div>
   )

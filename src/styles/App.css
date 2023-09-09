@@ -134,5 +134,6 @@ button:active {
 
   #cv-section {
     width: 70vw;
+    height: fit-content;
   }
 }
