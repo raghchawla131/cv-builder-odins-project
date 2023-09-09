@@ -1,0 +1,138 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+#cv-section {
+  width: 30vw;
+  background-color: rgb(218, 216, 216);
+  padding: 1rem;
+  position: relative;
+  height: calc(100vh - 4rem);
+}
+
+#input-section {
+  width: 40vw;
+  max-height: calc(100vh - 2rem);
+  overflow: scroll;
+}
+
+#input-section::-webkit-scrollbar {
+  display: none;
+}
+
+.input-info-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgb(218, 216, 216);
+  padding: 0 1rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.form-transition {
+  display: block;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.form-hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+ion-icon {
+  background-color: inherit;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 80%;
+}
+
+.form input {
+  margin-bottom: 1em;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form label {
+  font-weight: 700;
+}
+
+.form button {
+  padding: 0.5em;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.566);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover, 
+button:focus, 
+button:active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 900px) {
+  #app {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #input-section {
+    width: 90vw;
+  }
+
+  #cv-section {
+    width: 70vw;
+  }
+}
